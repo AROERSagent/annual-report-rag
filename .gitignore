@@ -1,0 +1,50 @@
+# ---------- 虚拟环境 ----------
+.venv/
+venv/
+env/
+
+# ---------- 密钥文件（绝对不要提交）----------
+# 用 .env* 覆盖 .env / .env.local / .env.production 等所有变体，
+# 再用 !.env.example 把模板白名单出来（Git 忽略规则后面写的优先级更高）
+.env*
+!.env.example
+
+# ---------- 数据与向量库（体积大，可重新生成）----------
+data/raw/
+data/chroma/
+data/eval_results/
+data/models/
+data/filter/
+# 但保留年报的元信息清单，方便别人知道数据来源
+!data/raw/index.json
+
+# ---------- pip / 临时目录 ----------
+.piptmp/
+.tmp/
+.tmp2/
+.tmpwork/
+
+# ---------- PyCharm / Python ----------
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+*.log
+
+# ---------- 前端 ----------
+web/node_modules/
+web/build/
+web/dist/
+web/.vite/
+
+# ---------- 我生成文档时留下的临时产物 ----------
+.docx-check*.json
+.docx-preview/
+build_doc*.py
+
+# ---------- 面试准备材料（个人用途）----------
+# 默认不提交；想让仓库更完整可以注释掉并提交，有时反而是加分项。
+docs/面试准备.md
