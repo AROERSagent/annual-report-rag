@@ -1,0 +1,34 @@
+# 本项目依赖（版本为实测通过 Python 3.14 的组合）
+#
+# 安装：
+#   pip install -r requirements.txt
+#
+# 换机器/换 Python 版本时若报错，可去掉 ==版本号 让 pip 自行选择。
+
+# ---------- Web 后端 ----------
+fastapi==0.143.0
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+sse-starlette==3.5.0
+
+# ---------- 大模型接入（DeepSeek 兼容 OpenAI 协议）----------
+langchain==1.4.4
+langchain-openai==1.7.0
+langchain-text-splitters==1.1.3
+
+# ---------- 向量库与向量模型 ----------
+chromadb==1.5.9
+fastembed==0.9.0
+
+# ---------- 文档解析与数据处理 ----------
+# 用 PyMuPDF 而不是 pypdf：实测 pypdf 对部分中文年报会抽出乱码
+pymupdf==1.28.2
+pandas==3.0.6
+
+# ---------- 中文分词与关键词检索（阶段 5 混合检索用）----------
+jieba==0.42.1
+rank-bm25==0.2.2
+
+# ---------- 工具 ----------
+python-dotenv==1.2.4
+tqdm==4.70.1
